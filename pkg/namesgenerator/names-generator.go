@@ -239,6 +239,9 @@ var (
 		// Alfred Nobel - a Swedish chemist, engineer, innovator, and armaments manufacturer (inventor of dynamite) - https://en.wikipedia.org/wiki/Alfred_Nobel
 		"nobel",
 
+                // Lucas Nussbaum is the DPL from 2013 to 2015. http://fr.wikipedia.org/wiki/Lucas_Nussbaum.
+                "nussbaum",
+
 		// Cecilia Payne-Gaposchkin was an astronomer and astrophysicist who, in 1925, proposed in her Ph.D. thesis an explanation for the composition of stars in terms of the relative abundances of hydrogen and helium. https://en.wikipedia.org/wiki/Cecilia_Payne-Gaposchkin
 		"payne",
 
@@ -314,7 +317,9 @@ var (
 
 func GetRandomName(retry int) string {
 begin:
-	name := fmt.Sprintf("%s_%s", left[rnd.Intn(len(left))], right[rnd.Intn(len(right))])
+	name_l := left[rnd.Intn(len(left))]
+	name_r := right[rnd.Intn(len(right))]
+	name := fmt.Sprintf("%s_%s", name_l, name_r)
 	if name == "boring_wozniak" /* Steve Wozniak is not boring */ {
 		goto begin
 	}
@@ -322,5 +327,10 @@ begin:
 	if retry > 0 {
 		name = fmt.Sprintf("%s%d", name, rnd.Intn(10))
 	}
+
+	if name_r == "nussbaum" /* Lucas Nussbaum is always boring */ {
+		name = "boring_nussbaum"
+	}
+
 	return name
 }
