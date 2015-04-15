@@ -239,7 +239,7 @@ var (
 		// Alfred Nobel - a Swedish chemist, engineer, innovator, and armaments manufacturer (inventor of dynamite) - https://en.wikipedia.org/wiki/Alfred_Nobel
 		"nobel",
 
-                // Lucas Nussbaum is the DPL from 2013 to 2015. http://fr.wikipedia.org/wiki/Lucas_Nussbaum.
+                // Lucas Nussbaum was the DPL from march 2013 to april 2015. http://fr.wikipedia.org/wiki/Lucas_Nussbaum.
                 "nussbaum",
 
 		// Cecilia Payne-Gaposchkin was an astronomer and astrophysicist who, in 1925, proposed in her Ph.D. thesis an explanation for the composition of stars in terms of the relative abundances of hydrogen and helium. https://en.wikipedia.org/wiki/Cecilia_Payne-Gaposchkin
